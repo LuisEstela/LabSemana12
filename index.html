@@ -1,11 +1,119 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./css/main.css" rel="stylesheet" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+  </head>
+
+  <body>
+    <div class="contenedor">
+      <div class="barra_hdr">
+        <div class="logo">
+          <img src="logoECODAR.png" alt="Logo ECODAR" id="logo_sistema" />
+        </div>
+        <div class="opciones">
+          <div class="txt_hdrs">Inicio</div>
+          <div class="txt_hdrs">Funciones</div>
+          <div class="txt_hdrs">Contactanos</div>
+        </div>
+        <button type="button" id="login-btn">Iniciar Sesión</button>
+      </div>
+
+      <div class="Inicio">
+        <div id="Inicio_contenedor">
+          <img
+            src="/images/img_sistema.png"
+            alt="Imagen sobre el sistema"
+            id="img_sistema"
+          />
+        </div>
+        <div id="Inicio_info">
+          <div class="txt_inicio">
+            Sistema de gestión de Inventarios y Ventas
+          </div>
+          <div class="txt_inicio2">
+            Optimiza tu negocio: Administra inventario, clientes y ventas de
+            forma fácil y rápida con nuestro sistema
+          </div>
+        </div>
+      </div>
+
+      <div class="funciones">
+        <div class="contenedor_funciones">
+          <div class="txt_titulo_funciones">Funciones del sistema</div>
+          <div class="grid-container">
+            <div class="cuadro">
+              <img src="icons/reportesIcon.svg" class="iconos" />
+              <h3 class="titulos">Reportes</h3>
+              <p class="descripciones">
+                Reportes de ventas y resumen de inventario
+              </p>
+            </div>
+            <div class="cuadro">
+              <img src="icons/inventarioIcon.svg" class="iconos" />
+              <h3 class="titulos">Inventario</h3>
+              <p class="descripciones">Agregar, editar o eliminar productos</p>
+            </div>
+            <div class="cuadro">
+              <img src="icons/ventasIcon.svg" class="iconos" />
+              <h3 class="titulos">Ventas</h3>
+              <p class="descripciones">Registrar ventas y generar boleta</p>
+            </div>
+            <div class="cuadro">
+              <img src="icons/clientesIcon.svg" class="iconos" />
+              <h3 class="titulos">Clientes</h3>
+              <p class="descripciones">Registrar, editar o eliminar clientes</p>
+            </div>
+            <div class="cuadro">
+              <img src="icons/adminIcon.svg" class="iconos" />
+              <h3 class="titulos">Administracion</h3>
+              <p class="descripciones">Personalización de logos y nombre</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="formulario">
+        <h2>Contáctanos</h2>
+        <form>
+          <div class="campo">
+            <label for="nombre">Nombre y Apellidos:</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Ingresa tu nombre y apellidos"
+              required
+            />
+          </div>
+          <div class="campo">
+            <label for="correo">Correo Electrónico:</label>
+            <input
+              type="email"
+              id="correo"
+              name="correo"
+              placeholder="Ingresa tu correo electrónico"
+              required
+            />
+          </div>
+          <div class="campo">
+            <label for="mensaje">Mensaje:</label>
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              placeholder="Escribe aquí tu mensaje"
+              required
+            ></textarea>
+          </div>
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </body>
 </html>

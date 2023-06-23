@@ -8,111 +8,305 @@
       rel="stylesheet"
     />
     <link href="./css/main.css" rel="stylesheet" />
-    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <title>Landing Page</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
   </head>
 
   <body>
     <div class="contenedor">
-      <div class="barra_hdr">
-        <div class="logo">
-          <img src="logoECODAR.png" alt="Logo ECODAR" id="logo_sistema" />
-        </div>
-        <div class="opciones">
-          <div class="txt_hdrs">Inicio</div>
-          <div class="txt_hdrs">Funciones</div>
-          <div class="txt_hdrs">Contactanos</div>
-        </div>
-        <button type="button" id="login-btn">Iniciar Sesión</button>
-      </div>
-
-      <div class="Inicio">
-        <div id="Inicio_contenedor">
-          <img
-            src="/images/img_sistema.png"
-            alt="Imagen sobre el sistema"
-            id="img_sistema"
-          />
-        </div>
-        <div id="Inicio_info">
-          <div class="txt_inicio">
-            Sistema de gestión de Inventarios y Ventas
-          </div>
-          <div class="txt_inicio2">
-            Optimiza tu negocio: Administra inventario, clientes y ventas de
-            forma fácil y rápida con nuestro sistema
-          </div>
-        </div>
-      </div>
-
-      <div class="funciones">
-        <div class="contenedor_funciones">
-          <div class="txt_titulo_funciones">Funciones del sistema</div>
-          <div class="grid-container">
-            <div class="cuadro">
-              <img src="icons/reportesIcon.svg" class="iconos" />
-              <h3 class="titulos">Reportes</h3>
-              <p class="descripciones">
-                Reportes de ventas y resumen de inventario
-              </p>
-            </div>
-            <div class="cuadro">
-              <img src="icons/inventarioIcon.svg" class="iconos" />
-              <h3 class="titulos">Inventario</h3>
-              <p class="descripciones">Agregar, editar o eliminar productos</p>
-            </div>
-            <div class="cuadro">
-              <img src="icons/ventasIcon.svg" class="iconos" />
-              <h3 class="titulos">Ventas</h3>
-              <p class="descripciones">Registrar ventas y generar boleta</p>
-            </div>
-            <div class="cuadro">
-              <img src="icons/clientesIcon.svg" class="iconos" />
-              <h3 class="titulos">Clientes</h3>
-              <p class="descripciones">Registrar, editar o eliminar clientes</p>
-            </div>
-            <div class="cuadro">
-              <img src="icons/adminIcon.svg" class="iconos" />
-              <h3 class="titulos">Administracion</h3>
-              <p class="descripciones">Personalización de logos y nombre</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="formulario">
-        <h2>Contáctanos</h2>
-        <form>
-          <div class="campo">
-            <label for="nombre">Nombre y Apellidos:</label>
-            <input
-              type="text"
-              id="nombre"
-              name="nombre"
-              placeholder="Ingresa tu nombre y apellidos"
-              required
+      <!-- NAVBAR LOGO, INICIO, ETC-->
+      <nav
+        class="navbar navbar-expand-lg navbar bg-white fixed-top"
+        style="border: 1px solid black"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img
+              src="logoECODAR.png"
+              alt="Logo"
+              style="max-width: 4rem; max-height: 4rem"
             />
+          </a>
+          <button
+            class="navbar-toggler collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div
+            class="collapse navbar-collapse"
+            id="navbarSupportedContent"
+            style="justify-content: space-evenly"
+          >
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#tarjeta-inicio">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#tarjeta-funciones">Funciones</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#tarjeta-objetivos">Objetivos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#tarjeta-contacto">Contactanos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http:/luisestela.github.io"
+                  >Iniciar Sesión</a
+                >
+              </li>
+            </ul>
           </div>
-          <div class="campo">
-            <label for="correo">Correo Electrónico:</label>
-            <input
-              type="email"
-              id="correo"
-              name="correo"
-              placeholder="Ingresa tu correo electrónico"
-              required
-            />
+        </div>
+      </nav>
+      <div style="margin-top: 5rem">
+        <!--Tarjeta SOBRE EL SISTEMA-->
+        <div
+          id="tarjeta-inicio"
+          class="container-fluid"
+          style="max-width: 75%; border: 1px solid black; border-radius: 5px"
+        >
+          <div class="row">
+            <div class="col" style="padding: 0">
+              <img
+                src="./images/img_sistema.png"
+                alt="Imagen"
+                class="img-fluid"
+              />
+            </div>
+            <div class="col">
+              <div
+                class="d-flex flex-column justify-content-center align-items-center"
+                style="height: 100%"
+              >
+                <div style="height: 40%" class="row align-items-center">
+                  <h1 class="text-center">
+                    Sistema de gestión de Inventarios y Ventas
+                  </h1>
+                </div>
+                <div style="height: 60%" class="row align-items-center">
+                  <h3 class="text-center">
+                    Optimiza tu negocio: Administra inventario, clientes y
+                    ventas de forma fácil y rápida con nuestro sistema
+                  </h3>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="campo">
-            <label for="mensaje">Mensaje:</label>
-            <textarea
-              id="mensaje"
-              name="mensaje"
-              placeholder="Escribe aquí tu mensaje"
-              required
-            ></textarea>
+        </div>
+
+        <!--Funciones del sistema-->
+        <div
+          id="tarjeta-funciones"
+          class="container-fluid"
+          style="max-width: 76%; margin-top: 1rem"
+        >
+          <div class="card border-0 mb-3">
+            <div
+              class="card-header text-center"
+              style="background-color: #004176; color: white"
+            >
+              <h1>Funciones del sistema</h1>
+            </div>
+
+            <!--GRILLA DONDE SE MUESTRAN LAS Funciones del sistema-->
+            <div class="card-body" style="padding: 0">
+              <div class="container">
+                <div class="row justify-content-center">
+                  <div class="col-md-4 col-sm-6 border border-dark">
+                    <a
+                      href="../AreaReportes/reportes.html"
+                      class="text-decoration-none"
+                    >
+                      <img
+                        style="height: 135px"
+                        class="img-fluid mx-auto d-block"
+                        src="images/reportesIcon.svg"
+                      />
+                      <h3 class="text-center text-dark">Reportes</h3>
+                      <p class="text-center text-dark">
+                        Reportes de ventas y resumen de inventario
+                      </p>
+                    </a>
+                  </div>
+                  <div class="col-md-4 col-sm-6 border border-dark">
+                    <a
+                      href="../AreaInventario/inventario.html"
+                      class="text-decoration-none"
+                    >
+                      <img
+                        src="images/inventarioIcon.svg"
+                        class="img-fluid mx-auto d-block"
+                        style="height: 135px"
+                      />
+                      <h3 class="text-center text-dark">Inventario</h3>
+                      <p class="text-center text-dark">
+                        Agregar, editar o eliminar productos
+                      </p>
+                    </a>
+                  </div>
+                  <div class="col-md-4 col-sm-6 border border-dark">
+                    <a
+                      href="../AreaVentas/index.html"
+                      class="text-decoration-none"
+                    >
+                      <img
+                        src="images/ventasIcon.svg"
+                        class="img-fluid mx-auto d-block"
+                        style="height: 135px"
+                      />
+                      <h3 class="text-center text-dark">Ventas</h3>
+                      <p class="text-center text-dark">
+                        Registrar ventas y generar boleta
+                      </p>
+                    </a>
+                  </div>
+                  <div class="col-md-4 col-sm-6 border border-dark">
+                    <a
+                      href="../RegistroClientes/index.html"
+                      class="text-decoration-none"
+                    >
+                      <img
+                        src="images/clientesIcon.svg"
+                        class="img-fluid mx-auto d-block"
+                        style="height: 135px"
+                      />
+                      <h3 class="text-center text-dark">Clientes</h3>
+                      <p class="text-center text-dark">
+                        Registrar, editar o eliminar clientes
+                      </p>
+                    </a>
+                  </div>
+                  <div class="col-md-4 col-sm-6 border border-dark">
+                    <a
+                      href="../AreaAdministracion/index.html"
+                      class="text-decoration-none"
+                    >
+                      <img
+                        src="images/adminIcon.svg"
+                        class="img-fluid mx-auto d-block"
+                        style="height: 135px"
+                      />
+                      <h3 class="text-center text-dark">Administración</h3>
+                      <p class="text-center text-dark">
+                        Personalización de logos y nombre
+                      </p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <button type="submit">Enviar</button>
-        </form>
+        </div>
+
+        <!--Tarjeta SOBRE OBJETIVOS-->
+        <div
+          id="tarjeta-objetivos"
+          class="container-fluid"
+          style="max-width: 75%; border: 1px solid black; border-radius: 5px"
+        >
+          <div class="row">
+            <div class="col">
+              <div
+                class="d-flex flex-column justify-content-center align-items-center"
+                style="height: 100%"
+              >
+                <div style="height: 15%" class="row align-items-center">
+                  <h1 class="text-center">Objetivos</h1>
+                </div>
+                <div style="height: 85%" class="row align-items-center">
+                  <h4 class="text" style="text-align: justify">
+                    Nuestro objetivo es ayudar a las MYPE a organizar y mejorar
+                    sus negocios. Con nuestro sistema, los usuarios podrán
+                    ingresar información sobre inventario, ventas y clientes.
+                    Con esta información el sistema podrá generar reportes de
+                    ventas que brindan información crucial para tomar decisiones
+                    que impulsan el crecimiento del negocio.
+                  </h4>
+                </div>
+              </div>
+            </div>
+            <div class="col" style="padding: 0">
+              <img
+                src="./images/img_objetivo.png"
+                alt="Imagen"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!--FORMULARIO DE CONTACTO-->
+        <div
+          id="tarjeta-contacto"
+          class="container-fluid"
+          style="
+            max-width: 75%;
+            margin-top: 1rem;
+            border: 1px solid black;
+            border-radius: 5px;
+          "
+        >
+          <div class="formulario">
+            <h2 style="text-align: center; padding: 1rem 0 0 0">Contáctanos</h2>
+            <form>
+              <div class="form-group" style="margin-bottom: 1rem">
+                <label for="nombre">Nombre y Apellidos:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nombre"
+                  name="nombre"
+                  placeholder="Ingresa tu nombre y apellidos"
+                  required
+                />
+              </div>
+              <div class="form-group" style="margin-bottom: 1rem">
+                <label for="correo">Correo Electrónico:</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="correo"
+                  name="correo"
+                  placeholder="Ingresa tu correo electrónico"
+                  required
+                />
+              </div>
+              <div class="form-group" style="margin-bottom: 1rem">
+                <label for="mensaje">Mensaje:</label>
+                <textarea
+                  class="form-control"
+                  id="mensaje"
+                  name="mensaje"
+                  placeholder="Escribe aquí tu mensaje"
+                  required
+                ></textarea>
+              </div>
+              <div style="text-align: center; margin-bottom: 1rem">
+                <button
+                  type="submit"
+                  class="btn btn-primary"
+                  style="width: 20rem; background-color: #004176; color: white"
+                >
+                  <h4>Enviar</h4>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
   </body>
